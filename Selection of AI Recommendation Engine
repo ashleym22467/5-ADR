@@ -1,24 +1,26 @@
 # ADR N: Selection of AI Recommendation Engine
 
-## Forces Influencing the Decision:
+# Forces Influencing the Decision
 Technological: Recommendation accuracy, scalability, and adaptability to user preferences.
-Cost-related: Computational power for training models, ongoing maintenance expenses.
-Project Local: Integration with NovelNest, user engagement impact.
+Cost-related: Measurable power for training models, ongoing maintenance expenses.
+Project Local: Combination with NovelNest, user engagement impact.
 
-## Decision 
-We will adopt a hybrid AI recommendation engine utilizing both collaborative filtering and content-based approaches to personalize book suggestions effectively.
+# Decision
+We will adopt a hybrid AI recommendation engine that combines collaborative filtering and content-based approaches to personalize book suggestions effectively.
 
-## Rationale 
-A hybrid model balances personalized recommendations with flexibility. Pure collaborative filtering was rejected due to cold-start issues for new users, while content-based filtering alone was deemed too restrictive. Alternative methods were rejected due to limitations:
-
+# Rationale
+A hybrid model ensures both personalization and flexibility in recommendations. Other methods were considered but ultimately rejected:
 Pure collaborative filtering was discarded due to cold-start issues for new users.
 Pure content-based filtering was discarded due to restricted recommendation diversity.
 
-## Status
-Proposed 
+# Status
+Proposed
 
-## Consequences
+# Consequences
 Positive: Highly personalized recommendations, improved engagement, and adaptability.
-Negative: Increased computational load, potential complexity in tuning models.
+Negative: Increased measurable load and potential complexity in tuning models.
 
-Alignment with AWS Well-Architected Pillars: Operational Excellence: AI evolves with user preferences, ensuring an intuitive experience. Performance Efficiency: Optimized algorithms reduce latency and improve recommendation speed. Cost Optimization: Balances model complexity with computational efficiency to minimize expenses.
+# Alignment with AWS Well-Architected Pillars
+Operational Excellence: AI adapts to user preferences, ensuring a seamless experience.
+Performance Efficiency: Optimized algorithms reduce delay and improve recommendation speed.
+Cost Optimization: Balances model complexity with measurable efficiency to minimize expenses.
