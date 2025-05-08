@@ -1,24 +1,26 @@
 # ADR N: User Authentication and Privacy Compliance
 
-## Forces Influencing the Decision:
+# Forces Influencing the Decision
 Technological: Security best practices, frictionless authentication experience.
 Cost-related: Implementation costs, third-party authentication service fees.
 Project Local: Compliance with GDPR, CCPA, and other privacy laws.
 
-## Decision 
+# Decision
 We will implement OAuth 2.0 and OpenID Connect for authentication, ensuring secure user access and regulatory compliance.
 
-## Rationale 
-OAuth 2.0 improves security by eliminating direct password storage while offering seamless user login. Traditional username/password authentication was rejected due to security concerns and poor user experience. Alternatives were rejected:
+# Rationale
+OAuth 2.0 enhances security by eliminating direct password storage while providing a smooth, user-friendly login experience. Alternative methods were considered but ultimately rejected:
+Traditional username/password authentication was discarded due to security vulnerabilities and poor user experience.
+SAML was discarded due to complex integration requirements.
 
-Traditional username/password authentication was discarded due to security vulnerabilities.
-SAML was discarded due to integration complexity
+# Status
+Proposed
 
-## Status
-Proposed 
+# Consequences
+Positive: Enhanced security, reduced risk of credential leaks, improved privacy compliance.
+Negative: Initial complexity in combining, reliance on third-party authentication providers.
 
-## Consequences
-Positive: Enhanced security, reduced risk of credential leaks, privacy compliance.
-Negative: Initial complexity in integration, reliance on third-party authentication providers.
-
-Alignment with AWS Well-Architected Pillars: Security: Strong encryption and multi-factor authentication ensure data protection. Reliability: Reduced risk of credential leaks enhances platform trust. Operational Excellence: Streamlined sign-in process improves user experience.
+# Alignment with AWS Well-Architected Pillars
+Security: Strong encryption and multi-factor authentication protect user data.
+Reliability: Reduced risk of credential leaks strengthens platform trust.
+Operational Excellence: A streamlined sign-in process improves user experience.
