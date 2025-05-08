@@ -1,24 +1,26 @@
 # ADR N: Data Storage Strategy for Efficient Book Recommendations
 
-## Forces Influencing the Decision:
+#Forces Influencing the Decision
 Technological: Query performance, storage efficiency, real-time recommendation processing.
 Cost-related: Hosting expenses, scaling costs, database optimization trade-offs.
 Project Local: Handling large book inventories, ensuring rapid recommendation retrieval.
 
-## Decision 
+# Decision
 We will use PostgreSQL for structured user and book metadata while implementing DynamoDB for fast recommendation lookups.
 
-## Rationale 
-PostgreSQL ensures robust relational integrity, while DynamoDB accelerates real-time recommendation access. Alternative approaches (e.g., MySQL) were rejected due to extensibility concerns. Alternative solutions were rejected:
-
-MySQL was discarded due to limited extensibility.
+# Rationale
+PostgreSQL offers strong relational integrity, while DynamoDB ensures fast, real-time access to recommendations. Alternative solutions were considered but ultimately rejected:
+MySQL was discarded due to limited extensibility for our evolving data needs.
 Pure NoSQL solutions were discarded due to constraints in structured metadata storage.
 
-## Status
-Proposed 
+# Status
+Proposed
 
-## Consequences
+# Consequences
 Positive: Faster queries, scalable recommendation processing, structured metadata management.
-Negative: Increased database management complexity, fluctuating cost based on read/write operations.
+Negative: Increased database management complexity, shift cost based on read/write operations.
 
-Alignment with AWS Well-Architected Pillars: Performance Efficiency: Optimized database structure enhances recommendation speed. Cost Optimization: Balances high-speed queries with efficient data storage. Sustainability: Reduces computational waste through optimized resource allocation.
+# Alignment with AWS Well-Architected Pillars
+Performance Efficiency: Optimized database structure enhances recommendation speed.
+Cost Optimization: Balances high-speed queries with efficient data storage.
+Sustainability: Reduces computational waste through optimized resource allocation.
