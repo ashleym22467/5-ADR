@@ -1,24 +1,28 @@
 # ADR N: Cloud Infrastructure and Hosting Strategy
 
-## Forces Influencing the Decision:
+# Forces Influencing the Decision
 Technological: Scalability, uptime reliability, compliance with security standards.
 Cost-related: Cloud pricing models, long-term operational costs.
 Project Local: Performance optimization, regulatory requirements.
 
-## Decision 
+# Decision
 We will deploy SmartMatch AI™ on AWS using a serverless architecture to optimize cost and scalability.
 
-## Rationale 
-AWS provides robust security, scalability, and cost-efficient serverless capabilities. Other providers like Google Cloud and Azure were considered but rejected due to pricing models and expertise constraints. Alternatives were rejected:
+# Rationale
+AWS offers robust security, scalability, and cost-efficient serverless capabilities. Other providers were considered but rejected due to various constraints:
 
 Google Cloud was discarded due to pricing inconsistencies and feature gaps.
-Azure was discarded due to team familiarity and integration concerns.
+Azure was discarded due to team familiarity and combination concerns.
 
-## Status
-Proposed 
+# Status
+Proposed
 
-## Consequences
+# Consequences
 Positive: High availability, reduced infrastructure maintenance, security compliance.
 Negative: Vendor lock-in, complex monitoring for serverless components.
 
-Alignment with AWS Well-Architected Pillars: Operational Excellence: AWS automates maintenance tasks, reducing downtime. Reliability: Built-in failover ensures SmartMatch AI™ remains accessible. Cost Optimization: Serverless architecture minimizes idle compute costs. Sustainability: Dynamic resource allocation reduces unnecessary power consumption.
+#Alignment with AWS Well-Architected Pillars
+Operational Excellence: AWS automates maintenance tasks, reducing downtime.
+Reliability: Built-in failover ensures SmartMatch AI™ remains accessible.
+Cost Optimization: Serverless architecture minimizes idle compute costs.
+Sustainability: Dynamic resource allocation reduces unnecessary power consumption.
