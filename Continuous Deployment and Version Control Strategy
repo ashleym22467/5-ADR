@@ -1,24 +1,27 @@
 # ADR N: Continuous Deployment and Version Control Strategy
 
-## Forces Influencing the Decision:
+# Forces Influencing the Decision
 Technological: Automation efficiency, rollback capabilities, integration with testing workflows.
 Cost-related: Maintenance costs, infrastructure dependencies.
 Project Local: Alignment with Git-based development workflows, deployment frequency.
 
-## Decision 
-We will implement GitHub Actions as the CI/CD pipeline to automate deployments and testing while maintaining version control.
+# Decision
+We will implement GitHub Actions as our CI/CD pipeline to automate deployments and testing while ensuring version control.
 
-## Rationale 
-GitHub Actions enables streamlined code integration, automated testing, and efficient deployment rollbacks. Jenkins and GitLab CI were considered but rejected due to repository hosting constraints and integration challenges. Alternative CI/CD solutions were rejected:
+# Rationale
+GitHub Actions offers seamless code merging, automated testing, and reliable rollback mechanisms. Other CI/CD solutions were evaluated but ultimately rejected:
+Jenkins was discarded due to high setup and maintenance overhead.
+GitLab CI was discarded due to repository hosting limitations and integration challenges.
 
-Jenkins was discarded due to excessive setup and maintenance overhead.
-GitLab CI was discarded due to repository hosting limitations.
+# Status
+Proposed
 
-## Status
-Proposed 
-
-## Consequences
-Positive: Faster development cycles, reduced manual intervention, improved collaboration.
+# Consequences
+Positive: Faster development cycles, reduced manual action, improved collaboration.
 Negative: Learning curve for workflow customization, dependency on GitHub infrastructure.
 
-Alignment with AWS Well-Architected Pillars: Operational Excellence: Automated testing ensures reliable deployments. Reliability: Streamlined rollback mechanisms reduce downtime risks. Cost Optimization: Eliminates redundant manual deployment processes. Sustainability: Reduces waste from inefficient development cycles.
+# Alignment with AWS Well-Architected Pillars
+Operational Excellence: Automated testing ensures reliable deployments.
+Reliability: Streamlined rollback mechanisms minimize downtime risks.
+Cost Optimization: Eliminates redundant manual deployment processes.
+Sustainability: Reduces inefficiencies in development cycles.
